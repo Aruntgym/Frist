@@ -62,3 +62,29 @@ console.log(0 == "");
 // }
 // console.log(x2);
 // Ans: ReferenceError
+
+console.log(1 == true);
+// Ans: true
+
+console.log(8 + + "10");
+// Ans: 18
+
+console.log(0 === null);
+// Ans: false
+
+const mynum = () => {
+    return;
+    return 9;
+};
+console.log(mynum() < 10);
+// Ans: false
+
+let result1 = ((x)=> {
+    return x * 2;
+})(10);
+console.log(result1);
+// Ans: 20
+
+const x3 = [1, , 3];
+console.log(x3.length); 
+// Ans: 3
