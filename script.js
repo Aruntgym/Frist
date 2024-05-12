@@ -88,3 +88,32 @@ console.log(result1);
 const x3 = [1, , 3];
 console.log(x3.length); 
 // Ans: 3
+
+const obj = {
+    num: 20
+}
+delete obj.num;
+console.log(obj.num);
+// Ans: undefined
+
+const num = [1, 2, 3];
+const num_2 = num.fill(0);
+console.log(num_2)
+// Ans: [0,0,0]
+// Ans: (3) [0, 0, 0]0: 01: 02: 0length: 3[[Prototype]]: Array(0)
+
+const x0 = !!0;
+console.log(x0)
+// Ans: false
+
+const  a = [null, ,null];
+console.log(a[1]);
+// Ans: undefined
+
+var xx = 10;
+function myfun(){
+    console.log(xx);
+    var xx = 5
+}
+myfun();
+// Ans: undefined
