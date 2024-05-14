@@ -117,3 +117,38 @@ function myfun(){
 }
 myfun();
 // Ans: undefined
+
+const num1 = 9;
+if(true){
+    const num1 = 5;
+}
+console.log(num1);
+// Ans: 9
+
+let num_1 = 10;
+let num_02 = num_1 >> 1;
+console.log(num_02);
+// Ans: 5
+
+var n = 11;
+function myfun(n){
+    if (n <= 1){
+        return n;
+    }
+    return console.log(n);
+}
+myfun(15);
+// Ans: 15
+
+const x4 = undefined;
+console.log(x4 == null);
+// Ans: True
+
+const x5 = null;
+if(x5 == undefined) {
+    function x111(y){
+        console.log(y);
+    }
+    x111(10);
+}
+// Ans: 10
