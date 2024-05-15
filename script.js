@@ -152,3 +152,28 @@ if(x5 == undefined) {
     x111(10);
 }
 // Ans: 10
+
+const allname = ["James", "Jess", "Lily", "Sevi"];
+    for (let x = 0; x < allname.length; x++){
+        if(x == 3){
+            break;
+        }
+        console.log(allname[x]);
+    }
+    // Ans: James
+    // script.js:161 Jess
+    // script.js:161 Lily
+
+    const sum = [1, 2, 3, 4];
+     for (let i = 0; i < sum.length; i++) {
+        if( i == 2) {
+            continue;
+        }
+        console.log(sum[i]);
+     }
+// Ans: 1 2 4
+
+const x4x = "web devs!";
+console.log(x4x.startsWith("web"));
+console.log(x4x.endsWith("devs"));
+// Ans: true, false
