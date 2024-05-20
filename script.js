@@ -234,3 +234,57 @@ function palindrome(str)
 //    let arr=[1,2,3,5];
 //    console.log(returnMissingNumber(arr));  //4
 
+function arrangeNumber(arr) {  
+  let zeroCount =0;
+  for(let i=0;i < arr.length;i++) {
+    if(arr[i]==0) {
+      zeroCount += 1;
+    }
+  }
+  
+  for(let i=0;i < zeroCount;i++) {
+      arr[i] = 0;
+  }
+  
+  for(let i=zeroCount;i < arr.length;i++) {
+   arr[i] = 1;
+  }
+  
+  return arr;
+}
+
+const nums = [1,0,0,1,0,1,1];
+const finalres= arrangeNumber(nums);
+console.log('final result', finalres); // output : [0,0,0,1,1,1,1]
+
+function checkPalindromeForAnagram(str) {
+    const exists={};
+    let oddCount=0;
+    for(let i=0;i<str.length;i++) {
+      if(exists[str[i]]) {
+        exists[str[i]]++;
+      }
+      else {
+        exists[str[i]]=1;
+      }
+    }
+    for(let key in exists) {
+       if(exists[key]%2!==0) {
+         oddCount++;
+       }
+    }
+    if((str.length%2==0 && oddCount ==0) || (str.length%2!==0 && oddCount == 1)) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  
+  let str = 'adamm';
+  let str2= 'caat';
+  let result01= checkPalindromeForAnagram(str);
+  let result2 = checkPalindromeForAnagram(str2)
+  console.log('result', result01); //result will be true as rearranging string 'adamm' can be made as madam which is a palindrome
+  console.log('result2', result2); //result will be false as rearranging string 'caat' cant be made as palindrome
+  
