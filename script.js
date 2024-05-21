@@ -288,3 +288,27 @@ function checkPalindromeForAnagram(str) {
   console.log('result', result01); //result will be true as rearranging string 'adamm' can be made as madam which is a palindrome
   console.log('result2', result2); //result will be false as rearranging string 'caat' cant be made as palindrome
   
+   function reverse(str) {
+ let result="";
+ for(let i=str.length-1;i>=0;i--) {
+   result+=str[i];
+ }
+ return result;
+}
+
+function reverseAllWords(str) {
+ let result="";
+ let start=0,end; 
+ for (let i=0;i<str.length;i++) {
+   if(str[i]==" ") {
+     result+=reverse(str.slice(start,i))+str[i];
+     start=result.length;
+   }
+   else if(i==str.length-1){
+     result+=reverse(str.slice(start,i+1));
+   }
+ }
+ return result;
+}
+
+console.log(reverseAllWords('how are you')) // woh era uoy
