@@ -178,6 +178,21 @@ console.log(x4x.startsWith("web"));
 console.log(x4x.endsWith("devs"));
 // Ans: true, false
 
+function Harry(name){
+  this.name = name;
+}
+const dog = new Harry("Bubby");
+console.log(dog instanceof Harry)
+// Ans: true
+
+const al = [1, 2, 3, 4, 5];
+al.length = 3;
+console.log(al)
+// Ans: (3) [1, 2, 3]0: 11: 22: 3length: 3[[Prototype]]: Array(0)
+
+
+
+
 //Write a code to display which character is coming how many times in a given string ?
 // Code:
  const countOccurences=(str)=> {
@@ -312,3 +327,4 @@ function reverseAllWords(str) {
 }
 
 console.log(reverseAllWords('how are you')) // woh era uoy
+
