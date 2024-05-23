@@ -190,6 +190,26 @@ al.length = 3;
 console.log(al)
 // Ans: (3) [1, 2, 3]0: 11: 22: 3length: 3[[Prototype]]: Array(0)
 
+// var fun = "500";
+// function fun(fun){
+//   console.log(fun);
+// }
+// fun(1313);
+// Ans: Error
+
+const a1 = "world";
+console.log(`Hello ${a1}`);
+// Ans: Hello world
+
+let a11 = 3;
+let b = a11 ** 2;
+console.log(b);
+// Ans: 9
+
+let nums1 = [4, 9, 16, 25];
+let sqrt = nums1.map(num => Math.sqrt(num));
+console.log(sqrt); 
+Ans: 2,3,4,5
 
 
 
