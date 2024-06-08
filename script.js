@@ -211,8 +211,38 @@ let sqrt = nums1.map(num => Math.sqrt(num));
 console.log(sqrt); 
 // Ans: 2,3,4,5
 
+var xt = true + false;
+console.log(xt)
+//Ans: 1
 
+const fruits = ["Banana", "Orange", "Apple", "Mango"]
+//Ans: Array.isArray(fruits)
 
+const xty = 10;
+const yty = 8;
+const zty = (xty > yty)? xty : yty;
+console.log(zty);
+//Ans: 10
+
+console.log(typeof(NaN));
+//Ans: Number
+
+console.log(1);
+setTimeout(function(){
+  console.log(2);
+}, 0);
+console.log(3);
+//Ans: 132
+
+function age(...args){
+  console.log(typeof args);    
+};
+age(10);
+//Ans: Object
+
+const fruit_s = ['apple', 'banana', 'orage'];
+fruit_s[3] = 'grape';
+console.log(fruit_s.length);
 
 
 //Write a code to display which character is coming how many times in a given string ?
