@@ -209,7 +209,9 @@ console.log(b);
 let nums1 = [4, 9, 16, 25];
 let sqrt = nums1.map(num => Math.sqrt(num));
 console.log(sqrt); 
-Ans: 2,3,4,5
+// Ans: 2,3,4,5
+
+
 
 
 
@@ -347,4 +349,6 @@ function reverseAllWords(str) {
 }
 
 console.log(reverseAllWords('how are you')) // woh era uoy
+
+
 
