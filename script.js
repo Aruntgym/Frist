@@ -243,7 +243,7 @@ age(10);
 const fruit_s = ['apple', 'banana', 'orage'];
 fruit_s[3] = 'grape';
 console.log(fruit_s.length);
-
+//
 
 //Write a code to display which character is coming how many times in a given string ?
 // Code:
@@ -379,6 +379,35 @@ function reverseAllWords(str) {
 }
 
 console.log(reverseAllWords('how are you')) // woh era uoy
+
+// 5. How to segregate 0s and 1s in an array in Javascript ?
+// Steps to get the solution:
+// Count the number of 0’s using ‘for’ loop and store it in a variable e.g zeroCount.
+// Now we know that remaining items will be 1’s.
+// Run ‘for’ loop till zeroCount, and replace the array items with 0. 4) Run one more ‘for’ loop to fill the remaining items with 1.
+// Below is the code to segregate 0s and 1s in an array:
+ function arrangeNumber(arr) {  
+  let zeroCount =0;
+  for(let i=0;i < arr.length;i++) {
+    if(arr[i]==0) {
+      zeroCount += 1;
+    }
+  }
+  
+  for(let i=0;i < zeroCount;i++) {
+      arr[i] = 0;
+  }
+  
+  for(let i=zeroCount;i < arr.length;i++) {
+   arr[i] = 1;
+  }
+  
+  return arr;
+}
+
+const nums01 = [1,0,0,1,0,1,1];
+const finalres01= arrangeNumber(nums01);
+console.log('final result', finalres01); // output : [0,0,0,1,1,1,1]
 
 
 
