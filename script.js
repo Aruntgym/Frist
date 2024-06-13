@@ -410,4 +410,28 @@ const finalres01= arrangeNumber(nums01);
 console.log('final result', finalres01); // output : [0,0,0,1,1,1,1]
 
 
+////////////////////////Patten???????????????????????????
+
+let rows = 10;
+let pattern = "";
+for(let n = 1; n <= rows; n++){
+  for(let num = 1; num <= n; num++){
+    pattern += num;
+  }
+  pattern += "\n"
+}
+console.log(pattern)
+
+let rows1 = 8;
+let pattern1 = "";
+for(let n = 1; n <= rows1; n++){
+  for(let num = 1; num <= n; num++){
+    pattern1 += n;
+  }
+  pattern1 += "\n"
+}
+console.log(pattern1)
+
+
+
 
