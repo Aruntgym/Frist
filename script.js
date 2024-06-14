@@ -410,7 +410,7 @@ const finalres01= arrangeNumber(nums01);
 console.log('final result', finalres01); // output : [0,0,0,1,1,1,1]
 
 
-////////////////////////Patten???????????????????????????
+////////////////////////Pattern of numbers???????????????????????????
 
 let rows = 10;
 let pattern = "";
@@ -435,3 +435,41 @@ console.log(pattern1)
 
 
 
+///////////////////////////MT Ds////////////////////////////
+
+let arr = [1, 2, 3, 4, 5];
+let size = arr.length;
+let pos = 2;  // Assume we want to insert an element at index 2
+
+// Shift elements to the right from position pos to size-1
+for(let i = size; i > pos; i--) {
+    arr[i] = arr[i-1];
+}
+
+// Now insert the new element at index pos
+arr[pos] = 99;
+
+console.log(arr);  // Output will be [1, 2, 99, 3, 4, 5]
+
+// function insertElement(arr, element, pos) {
+//   let size = arr.length;
+
+//   // Increase the array size by one to accommodate the new element
+//   arr[size] = null;
+
+//   // Shift elements to the right from the position to the end of the array
+//   for (let i = size; i > pos; i--) {
+//     arr[i] = arr[i - 1];
+//   }
+
+//   // Insert the new element at the specified position
+//   arr[pos] = element;
+
+//   return arr;
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+// let element = 99;
+// let pos = 2;
+// let newArr = insertElement(arr, element, pos);
+// console.log(newArr);
