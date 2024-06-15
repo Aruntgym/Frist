@@ -409,28 +409,59 @@ const nums01 = [1,0,0,1,0,1,1];
 const finalres01= arrangeNumber(nums01);
 console.log('final result', finalres01); // output : [0,0,0,1,1,1,1]
 
-
-////////////////////////Pattern of numbers???????????????????????????
-
-let rows = 10;
-let pattern = "";
-for(let n = 1; n <= rows; n++){
-  for(let num = 1; num <= n; num++){
-    pattern += num;
+function checkPalindromeForAnagram(str) {
+  const exists={};
+  let oddCount=0;
+  for(let i=0;i<str.length;i++) {
+    if(exists[str[i]]) {
+      exists[str[i]]++;
+    }
+    else {
+      exists[str[i]]=1;
+    }
   }
-  pattern += "\n"
-}
-console.log(pattern)
-
-let rows1 = 8;
-let pattern1 = "";
-for(let n = 1; n <= rows1; n++){
-  for(let num = 1; num <= n; num++){
-    pattern1 += n;
+  for(let key in exists) {
+     if(exists[key]%2!==0) {
+       oddCount++;
+     }
   }
-  pattern1 += "\n"
+  if((str.length%2==0 && oddCount ==0) || (str.length%2!==0 && oddCount == 1)) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
-console.log(pattern1)
+
+// let str = 'adamm';
+// let str2= 'caat';
+// let result = checkPalindromeForAnagram(str);
+// let result2 = checkPalindromeForAnagram(str2)
+// console.log('result', result); //result will be true as rearranging string 'adamm' can be made as madam which is a palindrome
+// console.log('result2', result2); //result will be false as rearranging string 'caat' cant be made as palindrome
+
+
+// ////////////////////////Pattern of numbers???????????????????????????
+
+// let rows = 10;
+// let pattern = "";
+// for(let n = 1; n <= rows; n++){
+//   for(let num = 1; num <= n; num++){
+//     pattern += num;
+//   }
+//   pattern += "\n"
+// }
+// console.log(pattern)
+
+// let rows1 = 8;
+// let pattern1 = "";
+// for(let n = 1; n <= rows1; n++){
+//   for(let num = 1; num <= n; num++){
+//     pattern1 += n;
+//   }
+//   pattern1 += "\n"
+// }
+// console.log(pattern1)
 
 
 
