@@ -462,6 +462,161 @@ function checkPalindromeForAnagram(str) {
 //   pattern1 += "\n"
 // }
 // console.log(pattern1)
+// ------
+
+// 1. The function fizzBuzz applies the FizzBuzz logic to an input number and returns a specific output based on the conditions
+//  Given a random number as input, what wilthe function return, and why?
+//  Hints:
+// The function first checks whether the input is a number If not, it returns NaN
+//  It then checks if the input is divisible by both 3 and 5. If true, it returns fizzBuzz,
+//  If the input is divisible by only 3, it returns 'Fizz" If the input is divisible by only 5, it returns 'Buzz" If none of the above conditions apply, it returs the input number itself.
+// javaScript code
+
+// 2/3
+
+// ChatGPT
+// The FizzBuzz function in JavaScript returns different outputs based on the input number according to the given conditions. Here is the JavaScript code for the FizzBuzz function along with explanations for each step:
+
+// javascript
+// Copy code
+function fizzBuzz(input) {
+    if (typeof input !== 'number') {
+        return 'NaN';
+    }
+
+    if (input % 3 === 0 && input % 5 === 0) {
+        return 'fizzBuzz';
+    }
+
+    if (input % 3 === 0) {
+        return 'Fizz';
+    }
+
+    if (input % 5 === 0) {
+        return 'Buzz';
+    }
+
+    return input;
+}
+Explanation:
+// Check if input is a number:
+
+// javascript
+// Copy code
+// if (typeof input !== 'number') {
+//     return 'NaN';
+// }
+// If the input is not a number, the function returns 'NaN'.
+// Check if input is divisible by both 3 and 5:
+
+// javascript
+// Copy code
+// if (input % 3 === 0 && input % 5 === 0) {
+//     return 'fizzBuzz';
+// }
+// If the input is divisible by both 3 and 5, the function returns 'fizzBuzz'.
+// Check if input is divisible by only 3:
+
+// javascript
+// Copy code
+// if (input % 3 === 0) {
+//     return 'Fizz';
+// }
+// If the input is divisible by only 3, the function returns 'Fizz'.
+// Check if input is divisible by only 5:
+
+// javascript
+// Copy code
+// if (input % 5 === 0) {
+//     return 'Buzz';
+// }
+// If the input is divisible by only 5, the function returns 'Buzz'.
+// Return the input number if none of the above conditions apply:
+
+// javascript
+// Copy code
+// return input;
+// If the input is not divisible by 3 or 5, the function returns the input number itself.
+// Examples:
+// For an input of 15, the function returns 'fizzBuzz' because 15 is divisible by both 3 and 5.
+// For an input of 9, the function returns 'Fizz' because 9 is divisible by 3.
+// For an input of 10, the function returns 'Buzz' because 10 is divisible by 5.
+// For an input of 7, the function returns 7 because 7 is not divisible by 3 or 5.
+// For an input of 'hello', the function returns 'NaN' because the input is not a number.
+
+// 1. The function fizzBuzz applies the FizzBuzz logic to an input number and returns a specific output based on the conditions
+//  Given a random number as input, what wilthe function return, and why?
+//  Hints:
+// The function first checks whether the input is a number If not, it returns NaN
+//  It then checks if the input is divisible by both 3 and 5. If true, it returns fizzBuzz,
+//  If the input is divisible by only 3, it returns 'Fizz" If the input is divisible by only 5, it returns 'Buzz" If none of the above conditions apply, it returs the input number itself.
+// javaScript code with output 
+
+// 3/3
+
+// ChatGPT
+// Here's a JavaScript implementation of the FizzBuzz function based on your description:
+
+// javascript
+// Copy code
+// function fizzBuzz(input) {
+  // Check if the input is a number
+  if (typeof input !== 'number') {
+    return 'NaN';
+  }
+
+  // Check if the input is divisible by both 3 and 5
+  if (input % 3 === 0 && input % 5 === 0) {
+    return 'fizzBuzz';
+  }
+
+  // Check if the input is divisible by only 3
+  if (input % 3 === 0) {
+    return 'Fizz';
+  }
+
+  // Check if the input is divisible by only 5
+  if (input % 5 === 0) {
+    return 'Buzz';
+  }
+
+  // If none of the above conditions apply, return the input number itself
+  return input;
+
+// Test cases
+console.log(fizzBuzz('test')); // NaN
+console.log(fizzBuzz(15)); // fizzBuzz
+console.log(fizzBuzz(9)); // Fizz
+console.log(fizzBuzz(10)); // Buzz
+console.log(fizzBuzz(7)); // 7
+// Let's break down the function and its outputs:
+
+// Input: 'test'
+
+// The input is not a number.
+// The function returns 'NaN'.
+// Input: 15
+
+// The input is divisible by both 3 and 5 (15 % 3 === 0 and 15 % 5 === 0).
+// The function returns 'fizzBuzz'.
+// Input: 9
+
+// The input is divisible by only 3 (9 % 3 === 0).
+// The function returns 'Fizz'.
+// Input: 10
+
+// The input is divisible by only 5 (10 % 5 === 0).
+// The function returns 'Buzz'.
+// Input: 7
+
+// The input is not divisible by 3 or 5.
+// The function returns the input number itself (7).
+
+
+
+
+
+
 
 
 
