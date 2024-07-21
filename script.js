@@ -611,6 +611,137 @@ console.log(fizzBuzz(7)); // 7
 
 // The input is not divisible by 3 or 5.
 // The function returns the input number itself (7).
+//----------------------
+
+// Describe the functionality of the "Stopwatch class How does the class handle the start, stop, and getDuration methods? What is the expected output when the code snippet is executed?
+//  Hints
+// The start() method starts the stopwatch if it is not already running.
+//  The "stop() method stops the stopwatch if it is running and records the end lime.
+//  The getDuration() method calculates the duration in seconds between the start and stop times or between the start time and the current time if the stopwatch is still running.
+//  The code snippet demonstrates how the 'Stopwatch class can be used.
+//  Analyze the Stopwatch class and answer the question based on the provided hints into javascript code
+
+// 2/3
+
+
+// Let's first create a Stopwatch class in JavaScript that adheres to the provided hints. Then, I'll describe its functionality and analyze the code snippet.
+
+// javascript
+// Copy code
+class Stopwatch {
+    constructor() {
+        this.startTime = null;
+        this.endTime = null;
+        this.running = false;
+    }
+
+    start() {
+        if (!this.running) {
+            this.startTime = new Date();
+            this.running = true;
+            this.endTime = null;
+        }
+    }
+
+    stop() {
+        if (this.running) {
+            this.endTime = new Date();
+            this.running = false;
+        }
+    }
+
+    getDuration() {
+        if (this.startTime === null) {
+            return 0; // Stopwatch has never been started
+        }
+        if (this.running) {
+            // If running, calculate the duration up to the current time
+            return (new Date() - this.startTime) / 1000;
+        } else {
+            // If stopped, calculate the duration between start and end times
+            return (this.endTime - this.startTime) / 1000;
+        }
+    }
+}
+
+// Example usage
+const sw = new Stopwatch();
+sw.start();
+setTimeout(() => {
+    sw.stop();
+    console.log(`Duration: ${sw.getDuration()} seconds`);
+}, 2000);
+// Functionality of the Stopwatch Class
+Constructor (constructor)
+
+// Initializes startTime, endTime, and running properties.
+// startTime and endTime are initially null.
+// running is a boolean indicating whether the stopwatch is running or not.
+// Start 
+// Method (start()):
+
+// Sets the startTime to the current date and time if the stopwatch is not already running.
+// Sets running to true and endTime to null.
+// Stop Method (stop()):
+
+// Sets the endTime to the current date and time if the stopwatch is running.
+// Sets running to false.
+// Get Duration Method (getDuration()):
+
+// If startTime is null, returns 0 (the stopwatch has never been started).
+// If the stopwatch is still running, calculates the duration from startTime to the current time.
+// If the stopwatch is stopped, calculates the duration between startTime and endTime.
+// Expected Output When Code Snippet is Executed
+// In the provided example, the following steps occur:
+
+// An instance of Stopwatch is created.
+// The start method is called, starting the stopwatch.
+// A setTimeout function is used to wait for 2000 milliseconds (2 seconds).
+// After 2 seconds, the stop method is called, stopping the stopwatch.
+// The getDuration method is called to calculate and print the duration in seconds.
+
+class Stopwatch {
+  constructor() {
+      this.startTime = null;
+      this.endTime = null;
+      this.running = false;
+  }
+
+  start() {
+      if (!this.running) {
+          this.startTime = Date.now();
+          this.running = true;
+          this.endTime = null; // reset endTime when the stopwatch is restarted
+      }
+  }
+
+  stop() {
+      if (this.running) {
+          this.endTime = Date.now();
+          this.running = false;
+      }
+  }
+
+  getDuration() {
+      if (this.running) {
+          return (Date.now() - this.startTime) / 1000; // return duration in seconds
+      } else if (this.startTime && this.endTime) {
+          return (this.endTime - this.startTime) / 1000; // return duration in seconds
+      } else {
+          return 0; // if the stopwatch was never started
+      }
+  }
+}
+
+// Code snippet demonstrating the usage of Stopwatch class
+const stopwatch = new Stopwatch();
+
+stopwatch.start();
+setTimeout(() => {
+  stopwatch.stop();
+  console.log(`Duration: ${stopwatch.getDuration()} seconds`);
+}, 2000);
+
 
 
 
